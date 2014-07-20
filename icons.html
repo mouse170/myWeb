@@ -30,6 +30,7 @@
 			var button2 = document.getElementById('button2');
 			var onB = document.getElementById('on');
 			var offB = document.getElementById('off');
+			var shadow = document.getElementById('shadow');
 
 			button3.addEventListener('click',function(){
 
@@ -42,6 +43,7 @@
 					onB.style.background="#b8b8b8";
 					offB.style.top="260px"; 
 					offB.style.border="10px solid #e8e8e8";
+					shadow.style.display ="none";
 				}
 				else{
 					button3.classList.remove('off');
@@ -51,6 +53,7 @@
 					onB.style.background="#E8E8E8";
 					offB.style.top= "230px";
 					offB.style.border="10px solid #FFF";
+					shadow.style.display = "inline-block";
 				}
 				
 
