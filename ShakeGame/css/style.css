@@ -1,0 +1,278 @@
+@charset "UTF-8";
+/* line 2, ../sass/layout.sass */
+* {
+  text-align: center;
+  background: #5D8CAE;
+  font-family: "Letter Gothic", "微軟正黑體";
+  overflow: hidden;
+}
+
+/* line 9, ../sass/layout.sass */
+.item_btn {
+  margin: 10px;
+  text-align: center;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 100px;
+  background: no-repeat 0 100px;
+  background-image: url(../images/shake_icon.png);
+  display: inline-block;
+}
+/* line 20, ../sass/layout.sass */
+.item_btn:hover {
+  opacity: 0.5;
+  border: 5px solid white;
+}
+
+/* line 25, ../sass/layout.sass */
+#shaker_cup {
+  width: auto;
+  height: 300px;
+  border-radius: 8px;
+}
+
+/* line 30, ../sass/layout.sass */
+.lightbox {
+  position: absolute;
+  display: none;
+  z-index: 999;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  padding: 10% 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* line 42, ../sass/layout.sass */
+.fb_btn {
+  display: none;
+  width: 150px;
+  height: 40px;
+  color: #FFF;
+  border-radius: 8px;
+  border: 3px solid #FFF;
+}
+/* line 49, ../sass/layout.sass */
+.fb_btn:hover {
+  background: #1F4788;
+}
+
+/* line 52, ../sass/layout.sass */
+#replay_btn {
+  margin: 0 0 5px 0;
+}
+
+/* line 55, ../sass/layout.sass */
+#guide_msg {
+  margin: 30px auto;
+  font-size: 30pt;
+  color: #fff;
+}
+
+/* line 59, ../sass/layout.sass */
+#drink_name {
+  display: none;
+  margin: 30px 0 20px 0;
+  font-size: 30pt;
+  color: #fff;
+}
+
+/* line 64, ../sass/layout.sass */
+#description {
+  display: none;
+  margin: 20px auto;
+  font-size: 20pt;
+  color: #fff;
+}
+
+/* line 70, ../sass/layout.sass */
+.item_icon {
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 100px;
+  display: inline-block;
+  background: url(../images/shake_icon.png) no-repeat 0 0;
+  width: 100px;
+  height: 100px;
+}
+/* line 77, ../sass/layout.sass */
+.item_icon:hover {
+  border: 5px solid rgba(25, 181, 254, 0.8);
+}
+/* line 79, ../sass/layout.sass */
+.item_icon:hover:before {
+  content: attr(alt);
+  font-size: 20pt;
+  color: #fff;
+  text-shadow: 0 0 10px black;
+}
+
+/*pad RWD */
+@media (max-width: 1300px) {
+  /* line 87, ../sass/layout.sass */
+  .item_icon, .item_btn {
+    border-radius: 75px;
+    width: 75px;
+    height: 75px;
+    background: url(../images/shake_icon_nb_pad.png) no-repeat 0 0;
+  }
+
+  /* line 92, ../sass/layout.sass */
+  .item_btn {
+    background: url(../images/shake_icon_nb_pad.png) no-repeat 0 75px;
+  }
+}
+/*phone RWD */
+@media (max-width: 500px) {
+  /* line 96, ../sass/layout.sass */
+  .item_icon, .item_btn {
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    background: url(../images/shake_icon_phone.png) no-repeat 0 0;
+  }
+
+  /* line 101, ../sass/layout.sass */
+  .item_btn {
+    background: url(../images/shake_icon_phone.png) no-repeat 0 50px;
+  }
+
+  /* line 103, ../sass/layout.sass */
+  #drink_name, #guide_msg {
+    font-size: 20pt;
+  }
+}
+/* line 2, ../sass/animation.sass */
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-name: zoomIn;
+  -moz-animation-duration: 0.5s;
+  -o-animation-name: zoomIn;
+  -o-animation-duration: 0.5s;
+  -ms-animation-name: zoomIn;
+  -ms-animation-duration: 0.5s;
+  animation-name: zoomIn;
+  animation-duration: 0.5s;
+}
+
+/* line 14, ../sass/animation.sass */
+.zoomOut {
+  -webkit-animation-name: zoomOut;
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-name: zoomOut;
+  -moz-animation-duration: 0.5s;
+  -o-animation-name: zoomOut;
+  -o-animation-duration: 0.5s;
+  -ms-animation-name: zoomOut;
+  -ms-animation-duration: 0.5s;
+  animation-name: zoomOut;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0.5;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes zoomOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes zoomIn {
+  0% {
+    opacity: 0.5;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes zoomOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes zoomIn {
+  0% {
+    opacity: 0.5;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-o-keyframes zoomOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-ms-keyframes zoomIn {
+  0% {
+    opacity: 0.5;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes zoomOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes zoomIn {
+  0% {
+    opacity: 0.5;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes zoomOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  100% {
+    opacity: 0;
+  }
+}
