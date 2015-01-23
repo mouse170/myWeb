@@ -23,7 +23,6 @@ function sprites_pic_setting(str){
 	else{
 		delta = -50;
 	}
-
 	for(var i=0;i<arr.length;i++){
 		Xpos = (arr[i].id.split("c")[1])%8*delta;
 		Ypos = Math.floor(arr[i].id.split("c")[1]/8)*delta;
@@ -83,7 +82,7 @@ function isItemEmpty(){
 			count++;
 			/*改變容器內液體高度*/
 			$("#shaker_cup").css({
-				background: "url(./images/drink_content_"+count+".png) no-repeat",
+				background: "url(./images/drink_content_"+count+"-01.png) no-repeat",
 				"background-size": "auto 300px"
 			});
 

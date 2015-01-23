@@ -35,7 +35,7 @@ function shake(a){
     return str;
     console.log(str+" , "+tmp[a[0]].name+" , "+tmp[a[1]].name+" , "+tmp[a[2]].name);
   }catch(err){
-    console.log(err.message+","+a+","+b);
+    console.log(err.message+","+a);
   }
 }
 
