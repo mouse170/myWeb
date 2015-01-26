@@ -57,6 +57,7 @@ function showResult(str){
 	$("#like_btn,#share_btn,#replay_btn,#drink_name,#description").fadeIn("slow");
 	// 調配結果
 	$("#drink_name").html(str);
-	$("meta[property='og\\:description']").attr("content", str);
+	/*將結果放入describtion*/
+	//$("meta[property='og\\:description']").attr("content", str);
 	// $("#description").html("bala bala balabalabala");
 }
